@@ -11,7 +11,6 @@ const authenticatedUser = (username,password)=>{
   return users.some(user => user.username === username && user.password === password)
 }
 
-//only registered users can login
 regd_users.post("/login", (req,res) => {
    let {username,password} = req.body;
    let result = authenticatedUser(username, password)
@@ -27,7 +26,6 @@ regd_users.post("/login", (req,res) => {
    }
 });
 
-// Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
   const isbn = req.params.isbn;
   const {username, review} = req.body;

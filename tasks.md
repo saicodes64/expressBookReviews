@@ -1,18 +1,16 @@
-Got it! You want a step-by-step plan structured like project parts (Part A, Part B, etc.) for clear execution and tracking. Let’s rewrite your tasks in that style while keeping everything organized and progressive:
+Here’s your Step-by-Step Plan converted cleanly into Markdown:
 
-⸻
+# 📚 Backend Book Review App – Step-by-Step Plan
 
-📚 Backend Book Review App – Step-by-Step Plan
+---
 
-⸻
+## Part A: Fork & Clone the Repository
+- Fork the GitHub repository to your own GitHub account.
+- Clone your fork to your local machine:
 
-Part A: Fork & Clone the Repository
-	•	Fork the GitHub repository to your own GitHub account.
-	•	Clone your fork to your local machine:
-
+```bash
 git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
 cd REPO_NAME
-
 
 	•	Explore the folder structure:
 	•	index.js → Main app entry point.
@@ -28,13 +26,11 @@ Part B: Environment Setup
 
 npm install express jsonwebtoken express-session
 
-
 	•	Start the server:
 
 node index.js
 
-
-	•	Confirm Server is running on http://localhost:5000.
+	•	Confirm server is running at http://localhost:5000.
 	•	Set up Postman (or Thunder Client in VS Code) to test endpoints later.
 
 ⸻
@@ -66,10 +62,9 @@ Part E: Authentication with JWT & Sessions
 	•	Store JWT in req.session.authorization.
 	•	In index.js, complete this middleware:
 
-app.use("/customer/auth/*", function auth(req,res,next){
+app.use("/customer/auth/*", function auth(req, res, next) {
     // Verify JWT from session
 });
-
 
 	•	Test login and ensure protected routes require authentication.
 
@@ -89,6 +84,7 @@ Part G: CRUD Practice with Async/Await & Promises
 	•	Use async to get all books.
 	•	Use Promises to get books by ISBN/Author/Title.
 	•	Retest all endpoints after refactor.
+	•	Store secret key in a config file.
 
 ⸻
 
@@ -111,9 +107,5 @@ Part I: Advanced Extensions (Optional)
 
 🔑 Quick Visual Flow
 
-A: Fork & Clone → B: Setup → C: Public Routes → D: Registration → E: Authentication → F: Reviews → G: Async/Promises → H: Testing → I: Advanced
-
-
-⸻
-
-Would you also like me to make this into a progress checklist table (with tick boxes) so you can track completion like a mini project plan?
+A: Fork & Clone → B: Setup → C: Public Routes → D: Registration → 
+E: Authentication → F: Reviews → G: Async/Promises → H: Testing → I: Advanced
